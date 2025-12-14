@@ -21,7 +21,7 @@ block main
 
     if episodes.length
       section
-        h2 Weitere Episoden
+        h2= `${episodes.length} weitere Episoden`
         .episodes
           each e in episodes
             +episodeItem(e)
