@@ -51,7 +51,9 @@
     "text": "Mag Open Source und [BTCPay Server](https://btcpayserver.org/) 💚 und schreibt lieber Software als Texte über sich selbst 👨🏻‍💻",
     "image": "/img/participants/dennis.jpg",
     "v4v": {
-      "address": "03b5ca2ceef3572eb4b8acfbc7755dab0dce24ed790e6945339cfcbe631e838600"
+      "address": "03b5ca2ceef3572eb4b8acfbc7755dab0dce24ed790e6945339cfcbe631e838600",
+      "customKey": "696969",
+      "customValue": "17"
     }
   },
   "daniel": {
