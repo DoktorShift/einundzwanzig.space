@@ -8,13 +8,14 @@ on:
   pull_request:
     branches:
       - master
-  # Used to trigger the build for Anchor feed updates. Can by kicked off via:
-  # curl -X POST -H "Authorization: token $GH_PAT" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/Einundzwanzig-Podcast/einundzwanzig.space/dispatches --data '{"event_type": "build_docs"}'
+  # Used to trigger the build via external updates (e.g. Anchor feed or Verein). Can by kicked off via:
+  # curl -X POST -H "Authorization: token $GH_PAT" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/Einundzwanzig-Podcast/einundzwanzig.space/dispatches --data '{"event_type": "anchor_update"}'
   repository_dispatch:
     types:
       - anchor_update
-  #  schedule:
-  #    - cron: "0 7 * * *"
+      - verein_update
+   schedule:
+     - cron: "0 7 * * *"
 
 jobs:
   build:

@@ -13,6 +13,7 @@
     "init": "run-s clean copy && run-p fetch build:data",
     "start": "cross-env NODE_ENV=development npm run init && cross-env NODE_ENV=development run-p start:*",
     "start:data": "onchange -k 'content/**/*' 'tasks/generate_site_data.js' -- npm run build:data",
+    "start:nostr": "onchange -i -k 'content/participants' 'tasks/generate_nostr.js' -- npm run build:nostr",
     "start:feed": "onchange -i -k 'generated/feed.json' 'tasks/generate_feed.js' -- npm run build:feed",
     "start:pages": "onchange -i -k 'pug.config.js' 'markdown.js' 'content/**' 'generated/**' 'src/**/*.pug' 'tasks/generate_pages.js' -- npm run build:pages -- {{file}}",
     "start:styles": "onchange -i -k 'src/**/*.css' -- npm run build:styles",
