@@ -14,8 +14,8 @@ on:
     types:
       - anchor_update
       - verein_update
-   schedule:
-     - cron: "0 7 * * *"
+  schedule:
+    - cron: "0 7 * * *"
 
 jobs:
   build:

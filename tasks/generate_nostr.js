@@ -42,7 +42,6 @@ Object.entries(members).forEach(([key, { npub, pubkey, nip05_handle }]) => {
   names[id] = new NDKUser({ npub }).pubkey
 })
 
-
 const dst = resolve(__dirname, '..', 'dist', '.well-known', 'nostr.json')
 const dir = dirname(dst)
 const res = { names, relays }
