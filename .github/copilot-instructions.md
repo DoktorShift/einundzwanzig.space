@@ -34,9 +34,9 @@ Ziel: Kurze, handlungsorientierte Hinweise, damit ein AI-Copilot sofort produkti
 
 - Integrationen & externe Abhängigkeiten
   - Podcast-Feed: `content/meta.json` enthält `masterFeedUrl`/`publicFeedUrl` — `tasks/fetch_feed.js` referenziert diese.
-  - Mempool-API: `https://mempool.observer/api/recentBlocks` in `generate_site_data.js` (block height in site-data).
+  - Mempool-API: `https://mempool.space/api/blocks/` in `generate_site_data.js` (block height in site-data).
   - Meetup-Portal: `https://portal.einundzwanzig.space/...` (Falling back to `content/meetups-do-not-edit.json`).
-  - Nostr: `tasks/generate_nostr.js` nutzt `@nostr-dev-kit/ndk` (erzeugt mapping/relays für `content/participants.json`).
+  - Nostr: `tasks/generate_nostr.js` nutzt `@nostr-dev-kit/ndk` (erzeugt Mappings für `content/participants.json`).
 
 - Fehlerszenarien & Debug-Hinweise
   - Viele Tasks loggen Fehler und fallen auf lokale JSONs zurück; bei Netzwerkfehlern zuerst `npm run build:data` manuell testen.

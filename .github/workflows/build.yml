@@ -13,6 +13,8 @@ on:
   repository_dispatch:
     types:
       - anchor_update
+  #  schedule:
+  #    - cron: "0 7 * * *"
 
 jobs:
   build:
